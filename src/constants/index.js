@@ -23,6 +23,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  gpt3,
+  hooBank,
+  gerichRestaurant,
 } from "../assets";
 
 export const navLinks = [
@@ -140,7 +143,7 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
-  }
+  },
 ];
 
 const testimonials = [
@@ -172,136 +175,58 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "GPT 3",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based AI platform that allows users to take information about Artificial Intelligence and its future.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "css",
         color: "green-text-gradient",
+      },
+    ],
+    image: gpt3,
+    source_code_link: "https://github.com/UsamaHayatN/chatGPT-3",
+    live_link: "https://usamahayat-gpt-3.netlify.app/",
+  },
+  {
+    name: "Online Banking",
+    description:
+      "Web application for effortlessly manage your finances anytime, anywhere with our secure online banking platform.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
       },
       {
         name: "tailwind",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-    live_link: "https://netlify.com/",
+    image: hooBank,
+    source_code_link: "https://github.com/UsamaHayatN/bank-modern-app",
+    live_link: "https://usamahayat-bank-app.netlify.app/",
   },
   {
-    name: "Job IT",
+    name: "Gerich Restaurant",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Savor the ease of dining with our online restaurant platform, where delicious meals are just a click away.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-    live_link: "https://netlify.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
         name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-    live_link: "https://netlify.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
         color: "green-text-gradient",
       },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-    live_link: "https://netlify.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-    live_link: "https://netlify.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-    live_link: "https://netlify.com/",
+    image: gerichRestaurant,
+    source_code_link: "https://github.com/UsamaHayatN/gerich-restaurant",
+    live_link: "https://usamahayat-gerich-restaurant.netlify.app/",
   },
 ];
 

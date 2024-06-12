@@ -30,6 +30,9 @@ import codistan from "./company/codistan.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import gpt3 from "./gpt-3.png";
+import gerichRestaurant from "./gerich-restaurant.png";
+import hooBank from "./hoo-bank.png";
 
 export {
   logo,
@@ -61,4 +64,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  gpt3,
+  gerichRestaurant,
+  hooBank,
 };
