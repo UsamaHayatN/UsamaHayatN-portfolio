@@ -26,6 +26,9 @@ import threejs from "./tech/threejs.svg";
 
 import pixyflux from "./company/pixyflux.png";
 import codistan from "./company/codistan.png";
+import arslanArshad from "./customer/arslan-arshad.jpg";
+import aqeelAhmad from "./customer/aqeel-ahmad.jpg";
+import bilalHassan from "./customer/bilal-hassan.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -67,4 +70,7 @@ export {
   gpt3,
   gerichRestaurant,
   hooBank,
+  arslanArshad,
+  aqeelAhmad,
+  bilalHassan,
 };

@@ -26,6 +26,9 @@ import {
   gpt3,
   hooBank,
   gerichRestaurant,
+  arslanArshad,
+  aqeelAhmad,
+  bilalHassan,
 } from "../assets";
 
 export const navLinks = [
@@ -150,26 +153,26 @@ const testimonials = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Arslan Arshad",
+    designation: "Senior Wordpress",
+    company: "Ropstam Solutions",
+    image: arslanArshad,
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "Aqeel Ahmad",
+    designation: "BackEnd Developer",
+    company: "PixyFlux",
+    image: aqeelAhmad,
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Bilal Hassan",
+    designation: "User",
+    company: "Upwork",
+    image: bilalHassan,
   },
 ];
 
