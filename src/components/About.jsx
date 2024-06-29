@@ -44,10 +44,9 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Highly skilled and results-driven Front-End Developer with expertise in React JS, Next.js,
-          Angular, TypeScript, and more. Strong background in creating efficient and visually
-          appealing web applications. Proficient in HTML, CSS, JavaScript, Redux. Proven expertise in
-          web performance optimization and collaborative teamwork
+          Highly skilled and results-driven MERN Stack Developer with expertise in React JS, Angular JS, Node JS,
+          Express JS, MongoDB, and more. Strong background in creating efficient and visually
+          appealing full-stack web applications.
         </motion.p>
 
         <div className="mt-20 flex flex-wrap gap-10">
