@@ -36,9 +36,9 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="hidden sm:flex gap-4">
-          <a href='https://github.com' className="text-white p-2 rounded-full hover:bg-gray-700 transition duration-300"><AiFillGithub size="2rem" /></a>
-          <a href='https://linkedin.com' className="text-white p-2 rounded-full hover:bg-gray-700 transition duration-300"><AiFillLinkedin size="2rem" /></a>
-          <a href='https://instagram.com' className="text-white p-2 rounded-full hover:bg-gray-700 transition duration-300"><AiFillInstagram size="2rem" /></a>
+          <a href='https://github.com/UsamaHayatN' className="text-white p-2 rounded-full hover:bg-gray-700 transition duration-300"><AiFillGithub size="2rem" /></a>
+          <a href='https://www.linkedin.com/in/usamahayatn/' className="text-white p-2 rounded-full hover:bg-gray-700 transition duration-300"><AiFillLinkedin size="2rem" /></a>
+          <a href='https://www.instagram.com/usamahayatn/' className="text-white p-2 rounded-full hover:bg-gray-700 transition duration-300"><AiFillInstagram size="2rem" /></a>
         </div>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
@@ -63,19 +63,19 @@ const Navbar = () => {
               ))}
               <div className="flex gap-4 mt-4">
                 <a
-                  href='https://github.com'
+                  href='https://github.com/UsamaHayatN'
                   className="text-white p-2 rounded-full 
                   hover:bg-gray-700 transition duration-300"
                 >
                   <AiFillGithub size="2rem" /></a>
                 <a
-                  href='https://linkedin.com'
+                  href='https://www.linkedin.com/in/usamahayatn/'
                   className="text-white p-2 rounded-full 
                   hover:bg-gray-700 transition duration-300"
                 >
                   <AiFillLinkedin size="2rem" /></a>
                 <a
-                  href='https://instagram.com'
+                  href='https://www.instagram.com/usamahayatn/'
                   className="text-white p-2 rounded-full 
                   hover:bg-gray-700 transition duration-300"
                 >

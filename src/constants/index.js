@@ -29,6 +29,7 @@ import {
   arslanArshad,
   aqeelAhmad,
   bilalHassan,
+  qintar,
 } from "../assets";
 
 export const navLinks = [
@@ -121,6 +122,16 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "MERN Stack Developer",
+    company_name: "Qintar IT Solutions",
+    icon: qintar,
+    iconBg: "#4A90E2",
+    date: "September 10 2024 - Present",
+    points: [
+      "Start developing backend of Sales Points Admin paneln with Node JS and Express JS.",
+    ],
+  },
   {
     title: "Angular JS Developer",
     company_name: "PixyFlux",

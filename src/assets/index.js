@@ -26,6 +26,7 @@ import threejs from "./tech/threejs.svg";
 
 import pixyflux from "./company/pixyflux.png";
 import codistan from "./company/codistan.png";
+import qintar from "./company/qintar.png";
 import arslanArshad from "./customer/arslan-arshad.jpg";
 import aqeelAhmad from "./customer/aqeel-ahmad.jpg";
 import bilalHassan from "./customer/bilal-hassan.jpg";
@@ -64,6 +65,7 @@ export {
   threejs,
   pixyflux,
   codistan,
+  qintar,
   carrent,
   jobit,
   tripguide,
