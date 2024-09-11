@@ -128,9 +128,7 @@ const experiences = [
     icon: qintar,
     iconBg: "#4A90E2",
     date: "September 10 2024 - Present",
-    points: [
-      "Start developing backend of Sales Points Admin paneln with Node JS and Express JS.",
-    ],
+    points: ["Developing Point of Sales POS project in MERN Stack."],
   },
   {
     title: "Angular JS Developer",
