@@ -16,7 +16,6 @@ import {
   mongodb,
   git,
   figma,
-  docker,
   pixyflux,
   codistan,
   carrent,
