@@ -25,6 +25,8 @@ import {
   threejs,
   gpt3,
   hooBank,
+  _3dPortfolio,
+  posSoftware,
   gerichRestaurant,
   arslanArshad,
   aqeelAhmad,
@@ -186,6 +188,53 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "3d Porfolio",
+    description:
+      "Developed a modern portfolio site designed to showcase skills and projects, providing a professional platform to enhance your career growth and opportunities.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+    ],
+    image: _3dPortfolio,
+    source_code_link: "https://github.com/UsamaHayatN/UsamaHayatN-portfolio",
+    live_link: "https://usamahayatn-portfolio.vercel.app/",
+  },
+  {
+    name: "Point of Sale Software",
+    description:
+      "Developed a full-featured POS software using the MERN stack, enabling efficient sales management, inventory tracking, and real-time data analysis.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "node",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: posSoftware,
+    source_code_link: "https://github.com/UsamaHayatN/POS-By-UH",
+  },
   {
     name: "GPT 3",
     description:

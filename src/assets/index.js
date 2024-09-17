@@ -37,6 +37,8 @@ import tripguide from "./tripguide.png";
 import gpt3 from "./gpt-3.png";
 import gerichRestaurant from "./gerich-restaurant.png";
 import hooBank from "./hoo-bank.png";
+import _3dPortfolio from "./3d-portfolio.png";
+import posSoftware from "./pos-software.png"
 
 export {
   logo,
@@ -72,6 +74,8 @@ export {
   gpt3,
   gerichRestaurant,
   hooBank,
+  _3dPortfolio,
+  posSoftware,
   arslanArshad,
   aqeelAhmad,
   bilalHassan,
