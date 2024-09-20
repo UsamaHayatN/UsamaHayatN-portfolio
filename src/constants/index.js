@@ -31,6 +31,7 @@ import {
   aqeelAhmad,
   bilalHassan,
   qintar,
+  xconTechnologies,
 } from "../assets";
 
 export const navLinks = [
@@ -125,10 +126,20 @@ const technologies = [
 const experiences = [
   {
     title: "MERN Stack Developer",
+    company_name: "XCon Technologies",
+    icon: xconTechnologies,
+    iconBg: "#383E56",
+    date: "September 20 2024 - Present",
+    points: [
+      "Tasks and User data Management project inMERN Stack for its own company to handle workload.",
+    ],
+  },
+  {
+    title: "MERN Stack Developer",
     company_name: "Qintar IT Solutions",
     icon: qintar,
     iconBg: "#4A90E2",
-    date: "September 10 2024 - Present",
+    date: "Sep 10 2024 - Sep 17 2024",
     points: ["Developing Point of Sales POS project in MERN Stack."],
   },
   {
