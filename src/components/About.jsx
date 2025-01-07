@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
@@ -9,6 +13,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -44,7 +49,7 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Highly skilled and results-driven MERN Stack Developer with expertise in React JS, Angular JS, Node JS,
+          Highly skilled and results-driven Full Stack Developer with expertise in React JS, Next JS, Angular JS, Node JS,
           Express JS, MongoDB, and more. Strong background in creating efficient and visually
           appealing full-stack web applications.
         </motion.p>

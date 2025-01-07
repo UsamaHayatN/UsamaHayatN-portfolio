@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Tilt } from 'react-tilt';
-import { styles } from '../styles';
-import { chain, github } from '../assets';
-import { SectionWrapper } from '../hoc';
-import { projects } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Tilt } from "react-tilt";
+import { styles } from "../styles";
+import { chain, github } from "../assets";
+import { SectionWrapper } from "../hoc";
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link, isNew }) => {
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+  live_link,
+  isNew,
+}) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
@@ -57,7 +69,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary" style={{ fontSize: '14px' }}>{description}</p>
+          <p className="mt-2 text-secondary" style={{ fontSize: "14px" }}>
+            {description}
+          </p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -95,11 +109,11 @@ const Works = () => {
           animate="show"
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-          maiores laboriosam dolorem omnis blanditiis, nisi recusandae ratione
-          officiis totam molestiae amet possimus harum in exercitationem id commodi,
-          provident vitae vel! Culpa exercitationem, earum recusandae officiis
-          pernatur labore quasi facilis odit, odio accusantium sint atque.
+          Showcasing a variety of projects developed using modern technologies
+          like MERN stack, React.js, Angular, Next.js, and TypeScript. These
+          include task management systems, POS software, dynamic websites, and
+          admin panels, tailored to solve real-world problems and enhance user
+          experiences.
         </motion.p>
       </div>
 
@@ -121,7 +135,7 @@ const Works = () => {
           onClick={handleToggle}
           className="bg-secondary py-3 px-8 text-white rounded-full hover:bg-secondary-dark transition duration-300"
         >
-          {showMore ? 'View Less' : 'View More'}
+          {showMore ? "View Less" : "View More"}
         </button>
       </div>
     </>

@@ -41,6 +41,7 @@ import gerichRestaurant from "./gerich-restaurant.png";
 import hooBank from "./hoo-bank.png";
 import _3dPortfolio from "./3d-portfolio.png";
 import posSoftware from "./pos-software.png";
+import xconTechnologiesSiteImg from "./xcon_technologies_site.png";
 
 export {
   logo,
@@ -71,6 +72,7 @@ export {
   codistan,
   qintar,
   xconTechnologies,
+  xconTechnologiesSiteImg,
   carrent,
   jobit,
   tripguide,

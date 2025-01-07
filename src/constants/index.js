@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   mobile,
   backend,
@@ -32,6 +33,7 @@ import {
   bilalHassan,
   qintar,
   xconTechnologies,
+  xconTechnologiesSiteImg,
 } from "../assets";
 
 export const navLinks = [
@@ -59,7 +61,7 @@ const services = [
     icon: nextjs,
   },
   {
-    title: "Learning Backend",
+    title: "Backend Developer",
     icon: nodejs,
   },
   {
@@ -129,9 +131,10 @@ const experiences = [
     company_name: "XCon Technologies",
     icon: xconTechnologies,
     iconBg: "#383E56",
-    date: "September 20 2024 - Present",
+    date: "September 20 2024 - January 6 2025",
     points: [
-      "Tasks and User data Management project inMERN Stack for its own company to handle workload.",
+      "Developed a professional website for XCon Technologies to showcase company services and portfolio.",
+      "Built a Task Management System, similar to Jira, for streamlined task assignment, tracking, and team collaboration.",
     ],
   },
   {
@@ -140,7 +143,7 @@ const experiences = [
     icon: qintar,
     iconBg: "#4A90E2",
     date: "Sep 10 2024 - Sep 17 2024",
-    points: ["Developing Point of Sales POS project in MERN Stack."],
+    points: ["Developing Point of Sales POS system in MERN Stack."],
   },
   {
     title: "Angular JS Developer",
@@ -149,7 +152,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Dec 2023 - May 2024",
     points: [
-      "Developing web applications using Angular JS with TypeScript.",
+      "Developing Logistic chain web applications using Angular JS with TypeScript.",
       "Engaging in remote Angular JS with Pixyflux, contributing to main project LogisticChain.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
@@ -162,7 +165,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "August 2022 - November 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Developed the admin panel for EM Tran Pro, a medical project focused on streamlined management and operations.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
@@ -192,12 +195,29 @@ const testimonials = [
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Bilal Hassan",
     designation: "User",
-    company: "Upwork",
+    company: "Offline",
     image: bilalHassan,
   },
 ];
 
 const projects = [
+  {
+    name: "XCon Technologies",
+    description:
+      "Developed a professional website for XCon Technologies to showcase company services and portfolio.",
+    tags: [
+      {
+        name: "next js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+    ],
+    image: xconTechnologiesSiteImg,
+    live_link: "https://www.xcontechnologies.com/",
+  },
   {
     name: "3d Porfolio",
     description:
