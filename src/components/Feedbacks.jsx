@@ -23,23 +23,31 @@ const FeedbackCard = ({
     <p className="text-white font-black text-[48px]">"</p>
 
     <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
+      <p className="text-white tracking-wider text-[18px]">
+        {testimonial || "No feedback provided."}
+      </p>
 
       <div className="mt-7 flex justify-between items-center gap-1 ">
         <div className="flex-1 flex flex-col">
           <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
+            <span className="blue-text-gradient">@</span> {name || "Anonymous"}
           </p>
           <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
+            {designation || "No designation"} {company ? `of ${company}` : ""}
           </p>
         </div>
 
-        <img
-          src={image}
-          alt={`feedback-by-${name}`}
-          className="w-10 h-10 rounded-full object-contain"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={`feedback-by-${name || "user"}`}
+            className="w-10 h-10 rounded-full object-contain"
+          />
+        ) : (
+          <div className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-white text-xs">
+            ?
+          </div>
+        )}
       </div>
     </div>
   </motion.div>
@@ -56,7 +64,7 @@ const Feedbacks = () => {
 
         const mappedData = data.map((t) => ({
           ...t,
-          image: urlFor(t.image).width(100).url(),
+          image: t.image ? urlFor(t.image).width(100).url() : null,
         }));
 
         setTestimonials(mappedData);
@@ -80,13 +88,19 @@ const Feedbacks = () => {
       </div>
 
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard
-            key={testimonial._id || index}
-            index={index}
-            {...testimonial}
-          />
-        ))}
+        {testimonials.length > 0 ? (
+          testimonials.map((testimonial, index) => (
+            <FeedbackCard
+              key={testimonial._id || index}
+              index={index}
+              {...testimonial}
+            />
+          ))
+        ) : (
+          <p className="text-white text-center w-full">
+            No testimonials available.
+          </p>
+        )}
       </div>
     </div>
   );

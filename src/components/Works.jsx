@@ -8,13 +8,16 @@ import { styles } from "../styles";
 import { chain, github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { client, urlFor } from "../sanityClient"; // Make sure sanityClient.js exists
+import { client, urlFor } from "../sanityClient"; // ✅ make sure sanityClient.js is correct
 
+// ==========================
+// Project Card Component
+// ==========================
 const ProjectCard = ({
   index,
   name,
   description,
-  tags,
+  tags = [],
   image,
   source_code_link,
   live_link,
@@ -23,25 +26,30 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      initial={isNew ? "hidden" : false}
-      animate={isNew ? "show" : false}
+      initial={isNew ? "hidden" : "show"}
+      animate="show"
       exit="hidden"
     >
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        options={{ max: 45, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
+        {/* Image */}
         <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          {image ? (
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          ) : (
+            <div className="w-full h-full bg-gray-800 rounded-2xl flex items-center justify-center text-gray-400">
+              No Image
+            </div>
+          )}
+
+          {/* Buttons */}
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-2">
             {live_link && (
               <div
                 onClick={() => window.open(live_link, "_blank")}
@@ -69,16 +77,18 @@ const ProjectCard = ({
           </div>
         </div>
 
+        {/* Details */}
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary" style={{ fontSize: "14px" }}>
+          <h3 className="text-white font-bold text-[22px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px] leading-[22px]">
             {description}
           </p>
         </div>
 
+        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags?.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+          {tags?.map((tag, i) => (
+            <p key={i} className={`text-[14px] ${tag.color || "text-white"}`}>
               #{tag.name}
             </p>
           ))}
@@ -88,6 +98,9 @@ const ProjectCard = ({
   );
 };
 
+// ==========================
+// Works Section
+// ==========================
 const Works = () => {
   const [projects, setProjects] = useState([]);
   const [showMore, setShowMore] = useState(false);
@@ -95,13 +108,13 @@ const Works = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const query = '*[_type == "project"] | order(_createdAt desc)';
+        const query = `*[_type == "project"] | order(_createdAt desc)`;
         const data = await client.fetch(query);
 
-        // Map images to URL
+        // ✅ Map image safely
         const mappedData = data.map((p) => ({
           ...p,
-          image: urlFor(p.image).width(600).url(),
+          image: p.image ? urlFor(p.image).width(600).url() : null,
         }));
 
         setProjects(mappedData);
@@ -113,21 +126,21 @@ const Works = () => {
     fetchProjects();
   }, []);
 
-  const handleToggle = () => setShowMore(!showMore);
+  const handleToggle = () => setShowMore((prev) => !prev);
   const displayedProjects = showMore ? projects : projects.slice(0, 3);
 
   return (
     <>
+      {/* Section Title */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
+      {/* Intro Paragraph */}
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          initial="hidden"
-          animate="show"
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Showcasing a variety of projects developed using modern technologies
@@ -138,6 +151,7 @@ const Works = () => {
         </motion.p>
       </div>
 
+      {/* Projects Grid */}
       <div className="mt-20 flex flex-wrap gap-7">
         <AnimatePresence>
           {displayedProjects.map((project, index) => (
@@ -151,6 +165,7 @@ const Works = () => {
         </AnimatePresence>
       </div>
 
+      {/* Toggle Button */}
       {projects.length > 3 && (
         <div className="w-full flex justify-center mt-10">
           <button

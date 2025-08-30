@@ -17,30 +17,36 @@ const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: "#1d1836", color: "#fff" }}
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
+    date={experience.date || "No date"}
+    iconStyle={{ background: experience.iconBg || "#333" }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60px] h-[60px] object-contain"
-        />
+        {experience.icon ? (
+          <img
+            src={experience.icon}
+            alt={experience.company_name || "company-logo"}
+            className="w-[60px] h-[60px] object-contain"
+          />
+        ) : (
+          <span className="text-white text-sm">No Logo</span>
+        )}
       </div>
     }
   >
     <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+      <h3 className="text-white text-[24px] font-bold">
+        {experience.title || "Untitled Role"}
+      </h3>
       <p
         className="text-secondary font-semibold"
         style={{ margin: 0, fontSize: "16px" }}
       >
-        {experience.company_name}
+        {experience.company_name || "Unknown Company"}
       </p>
     </div>
 
     <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point, index) => (
+      {(experience.points || []).map((point, index) => (
         <li
           key={`experience-point-${index}`}
           className="text-white-100 text-[14px] pl-1 tracking-wider"
@@ -61,10 +67,10 @@ const Experience = () => {
         const query = '*[_type == "experience"] | order(_createdAt desc)';
         const data = await client.fetch(query);
 
-        // Map images to URLs
+        // Map images safely
         const mappedData = data.map((exp) => ({
           ...exp,
-          icon: urlFor(exp.icon).width(100).url(),
+          icon: exp.icon ? urlFor(exp.icon).width(100).url() : null,
         }));
 
         setExperiences(mappedData);
@@ -85,12 +91,16 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={experience._id || index}
-              experience={experience}
-            />
-          ))}
+          {experiences.length > 0 ? (
+            experiences.map((experience, index) => (
+              <ExperienceCard
+                key={experience._id || index}
+                experience={experience}
+              />
+            ))
+          ) : (
+            <p className="text-white text-center">No experiences found.</p>
+          )}
         </VerticalTimeline>
       </div>
     </>
