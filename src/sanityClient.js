@@ -5,7 +5,7 @@ export const client = createClient({
   projectId: "dvuiz4o3",
   dataset: "production",
   apiVersion: "2023-08-30",
-  useCdn: true,
+  useCdn: false,
 });
 
 // Image URL builder
