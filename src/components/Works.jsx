@@ -29,13 +29,14 @@ const ProjectCard = ({
       initial={isNew ? "hidden" : "show"}
       animate="show"
       exit="hidden"
+      className="flex-1"
     >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full flex flex-col"
       >
         {/* Image */}
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full h-[230px] flex-shrink-0">
           {image ? (
             <img
               src={image}
@@ -78,20 +79,20 @@ const ProjectCard = ({
         </div>
 
         {/* Details */}
-        <div className="mt-5">
+        <div className="mt-5 flex-1 flex flex-col">
           <h3 className="text-white font-bold text-[22px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] leading-[22px]">
+          <p className="mt-2 text-secondary text-[14px] leading-[22px] flex-1">
             {description}
           </p>
-        </div>
 
-        {/* Tags */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags?.map((tag, i) => (
-            <p key={i} className={`text-[14px] ${tag.color || "text-white"}`}>
-              #{tag.name}
-            </p>
-          ))}
+          {/* Tags */}
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags?.map((tag, i) => (
+              <p key={i} className={`text-[14px] ${tag.color || "text-white"}`}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
         </div>
       </Tilt>
     </motion.div>
